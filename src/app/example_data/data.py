@@ -1,111 +1,89 @@
+# Day 1 for user 1
 day_1_user_1 = {
     "user_id": 1, 
     "dttm": "2024-10-5",
     "data": {
-        "apple": 2, 
-        "starfruit": 7, 
-        "milk": 1, 
-        "chicken": 2, 
-        "fried-chicken": 1, 
-        "spinach": 3, 
-        "yogurt": 1, 
+        "apple": {"count": 2, "moldy_huh": False}, 
+        "starfruit": {"count": 7, "moldy_huh": False}, 
+        "milk": {"count": 1, "moldy_huh": False}, 
+        "chicken": {"count": 2, "moldy_huh": False}, 
+        "fried-chicken": {"count": 1, "moldy_huh": False}, 
+        "spinach": {"count": 3, "moldy_huh": True},  # Moldy spinach
+        "yogurt": {"count": 1, "moldy_huh": False},
     }
 }
 
+# Day 2 for user 1
 day_2_user_1 = {
     "user_id": 1, 
-    "dttm": "2024-10-5",
+    "dttm": "2024-10-6",
     "data": {
-        "apple": 1, 
-        "starfruit": 4, 
-        "chicken": 8, 
-        "fried-chicken": 3, 
-        "spinach": 2, 
-        "yogurt": 1, 
-        "salmon": 3
+        "apple": {"count": 1, "moldy_huh": False}, 
+        "starfruit": {"count": 4, "moldy_huh": False}, 
+        "chicken": {"count": 8, "moldy_huh": False}, 
+        "fried-chicken": {"count": 3, "moldy_huh": False}, 
+        "spinach": {"count": 2, "moldy_huh": False}, 
+        "yogurt": {"count": 1, "moldy_huh": False}, 
+        "salmon": {"count": 3, "moldy_huh": False}
     }
 }
 
+# Day 1 for user 2
 day_1_user_2 = {
     "user_id": 2, 
     "dttm": "2024-10-5",
     "data": {
-        "orange": 3, 
-        "apple": 4, 
-        "tofu": 2, 
-        "broccoli": 1, 
-        "milk": 2, 
-        "yogurt": 1, 
-        "chicken": 1
+        "orange": {"count": 3, "moldy_huh": False}, 
+        "apple": {"count": 4, "moldy_huh": True},   # Moldy apple
+        "tofu": {"count": 2, "moldy_huh": False}, 
+        "broccoli": {"count": 1, "moldy_huh": False}, 
+        "milk": {"count": 2, "moldy_huh": False}, 
+        "yogurt": {"count": 1, "moldy_huh": False}, 
+        "chicken": {"count": 1, "moldy_huh": False}
     }
 }
 
+# Day 2 for user 2
 day_2_user_2 = {
     "user_id": 2, 
     "dttm": "2024-10-6",
     "data": {
-        "banana": 2, 
-        "blueberries": 5, 
-        "milk": 1, 
-        "pork": 3, 
-        "tofu": 1, 
-        "spinach": 4, 
-        "broccoli": 2
+        "banana": {"count": 2, "moldy_huh": False}, 
+        "blueberries": {"count": 5, "moldy_huh": False}, 
+        "milk": {"count": 1, "moldy_huh": False}, 
+        "pork": {"count": 3, "moldy_huh": False}, 
+        "tofu": {"count": 1, "moldy_huh": False}, 
+        "spinach": {"count": 4, "moldy_huh": True},  # Moldy spinach
+        "broccoli": {"count": 2, "moldy_huh": False}
     }
 }
 
+# Day 1 for user 3
 day_1_user_3 = {
     "user_id": 3, 
     "dttm": "2024-10-5",
     "data": {
-        "grapes": 8, 
-        "pear": 3, 
-        "salmon": 1, 
-        "lettuce": 2, 
-        "milk": 3, 
-        "fried-chicken": 1, 
-        "spinach": 1
+        "grapes": {"count": 8, "moldy_huh": False}, 
+        "pear": {"count": 3, "moldy_huh": False}, 
+        "salmon": {"count": 1, "moldy_huh": False}, 
+        "lettuce": {"count": 2, "moldy_huh": True},  # Moldy lettuce
+        "milk": {"count": 3, "moldy_huh": False}, 
+        "fried-chicken": {"count": 1, "moldy_huh": False}, 
+        "spinach": {"count": 1, "moldy_huh": False}
     }
 }
 
+# Day 2 for user 3
 day_2_user_3 = {
     "user_id": 3, 
     "dttm": "2024-10-6",
     "data": {
-        "orange": 2, 
-        "pear": 1, 
-        "chicken": 4, 
-        "broccoli": 3, 
-        "yogurt": 1, 
-        "salmon": 2, 
-        "spinach": 5
-    }
-}
-
-day_1_user_4 = {
-    "user_id": 4, 
-    "dttm": "2024-10-5",
-    "data": {
-        "banana": 3, 
-        "strawberries": 10, 
-        "yogurt": 2, 
-        "chicken": 3, 
-        "carrots": 4, 
-        "broccoli": 1, 
-        "fish": 2
-    }
-}
-
-day_2_user_4 = {
-    "user_id": 4, 
-    "dttm": "2024-10-6",
-    "data": {
-        "grapes": 6, 
-        "orange": 4, 
-        "spinach": 3, 
-        "fried-chicken": 2, 
-        "salmon": 1, 
-        "milk": 1, 
-        "blueberries": 5
+        "orange": {"count": 2, "moldy_huh": False}, 
+        "pear": {"count": 1, "moldy_huh": False}, 
+        "chicken": {"count": 4, "moldy_huh": False}, 
+        "broccoli": {"count": 3, "moldy_huh": False}, 
+        "yogurt": {"count": 1, "moldy_huh": False}, 
+        "salmon": {"count": 2, "moldy_huh": False}, 
+        "spinach": {"count": 5, "moldy_huh": True}  # Moldy spinach
     }
 }
