@@ -1,28 +1,38 @@
 import React from 'react';
 import Letter from './Letter';
+import './Letters.css';
 
 const Letters = () => {
-    const letters = [
-        { char: 'A', rotation: 0 },
+    const whats = [
+        { char: 'W', rotation: 0 },
+        { char: 'H', rotation: 15 },
+        { char: 'A', rotation: -15 },
+        { char: 'T', rotation: 30 },
+        { char: 'L', rotation: -30 , size: '20px'},
+        { char: 'S', rotation: 0 },
+    ];
+
+    const cookin = [
         { char: 'C', rotation: 15 },
-        { char: 'G', rotation: -15 },
-        { char: 'H', rotation: 30 },
-        { char: 'i', rotation: -30 },
-        { char: 'K', rotation: 0 },
-        { char: 'L', rotation: 15 },
-        { char: 'N', rotation: -15 },
+        { char: 'O', rotation: -15 },
         { char: 'O', rotation: 30 },
-        { char: 'S', rotation: -30 },
-        { char: 'T', rotation: 0 },
-        { char: 'W', rotation: 15 },
-        { char: 'X', rotation: -15 },
+        { char: 'K', rotation: -30 },
+        { char: 'i', rotation: 0 },
+        { char: 'N', rotation: 15 },
     ];
 
     return (
-        <div className="letters">
-            {letters.map(({ char, rotation }) => (
-                <Letter key={char} letter={char} rotation={rotation} />
-            ))}
+        <div className="words-container">
+            <div className="word1">
+                {whats.map(({ char, rotation, size }) => (
+                    <Letter key={char} letter={char} rotation={rotation} size={size} />
+                ))}
+            </div>
+            <div className="word2">
+                {cookin.map(({ char, rotation, size }) => (
+                    <Letter key={char} letter={char} rotation={rotation} size={size} />
+                ))}
+            </div>
         </div>
     );
 };
