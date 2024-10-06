@@ -1,6 +1,8 @@
-.letters-container {
-    position: relative; /* Position the letters relative to this container */
+.words-container {
+    position: absolute; /* Position the letters relative to this container */
     width: 100%; /* You can set a specific width */
     height: 500px; /* Set a specific height */
-    background-color: #f0f0f0; /* Optional: Add a background to visualize the container */
+    left: 33%; 
+    top: 3rem;
+
 }
