@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Letters from './components/Letters';
+import Letters from './Letters';
 
 function App() {
   const [message, setMessage] = useState("");
