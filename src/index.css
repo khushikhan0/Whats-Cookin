@@ -4,11 +4,17 @@
 
 .test {
     position: absolute;
-    top: 0; /* Adjust this to move the div above the fridge */
+    top: 50px; /* Adjust this to move the div above the fridge */
     left: 50%;
     transform: translateX(-50%);
     background-color: yellow;
     padding: 10px;
     border: 2px solid black;
     z-index: 1; /* Ensure it appears above other elements */
+}
+.polaroid {
+
+}
+.sticky-note {
+
 }

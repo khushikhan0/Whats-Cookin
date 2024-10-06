@@ -1,0 +1,20 @@
+.test {
+    position: absolute;
+    background-color: red;
+    z-index: 1; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.polaroid-button {
+    position: absolute;  
+    left: 27%;
+    top: 20rem;
+}
+
+.sticky-note-button {
+    position: absolute; 
+    left: 55%;
+    top: 22rem;
+}
