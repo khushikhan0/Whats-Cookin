@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./imgs/tile-background.png");
+  background-image: url("../imgs/tile-background.png");
   z-index: -1;
 }
 
