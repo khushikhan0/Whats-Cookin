@@ -12,7 +12,7 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
@@ -21,4 +21,8 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
-    return {"message": "root directory"}
+    return {"message": "Welcome to your todo list."}
+
+@app.get("/msg")
+async def get_msg(): 
+    return {'message': "AHHHHHHHHHHHHH"}

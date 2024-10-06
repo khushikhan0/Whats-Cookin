@@ -1,0 +1,39 @@
+.background {
+    position: fixed; /* Ensures the background stays fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./imgs/tile-background.png");
+    z-index: -1;
+  }
+  
+  .center {
+    display: flex; 
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .fridge {
+    display: flex;
+    background-color: #CAC7C7;
+    border-top-right-radius: 65px;
+    border-top-left-radius: 65px;
+    justify-content: center;
+    width: 85vw;
+    margin-top: 5vh;
+  }
+  
+  .handle{
+    background-color: #3F3F3F;
+  }
+  
+  .handle-shadow{
+    background-color: #767474;
+  }
+  
+  .handle .handle-shadow {
+    border-radius: 25px;
+    width: 75px;
+    height: 650px;
+  }
