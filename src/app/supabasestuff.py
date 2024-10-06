@@ -16,10 +16,15 @@ supabase: Client = create_client(url, key)
 #     .execute()
 # )
 
-# TODO: def update_db(json_file):
+# TODO: def update_db(info):
 # update db everytime photo is uploaded
 # take in a dict, hashmap, json etc -> parse info -> update db with it
 
 
-# TODO: def give_db_data():
-# get data from db -> get element by id    
+# def get_data_by_id(id):
+#     response = (supabase
+#         .table("myfood")
+#         .select('*')
+#         .eq('id', id)
+#         .execute())
+#     return response
