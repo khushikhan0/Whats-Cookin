@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Letters from './components/Letters';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -18,6 +19,7 @@ function App() {
         <div className="handle"></div>
         <div className="handle-shadow"></div>
         <p>Message from the backend: {message}</p>
+        <Letters /> 
       </div>
     </div>
   );
