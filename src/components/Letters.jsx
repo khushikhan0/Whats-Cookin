@@ -1,5 +1,6 @@
 import React from 'react';
 import Letter from './Letter';
+import './Letters.css';
 
 const Letters = () => {
     const whats = [
