@@ -26,3 +26,5 @@ async def read_root() -> dict:
 @app.get("/msg")
 async def get_msg(): 
     return {'message': "AHHHHHHHHHHHHH"}
+
+# TODO: khushi write post route pls
