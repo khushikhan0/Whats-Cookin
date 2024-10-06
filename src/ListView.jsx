@@ -31,8 +31,8 @@ function ListView() {
     <div>
       <App />
       <img src="src/imgs/paper.png" className="paper" />
-      <div onClick={handleClick}>
-        <img src="src/imgs/x.png" className="x" />
+      <div onClick={handleClick} className="x">
+        <img src="src/imgs/x.png"  />
       </div>
       <div>
         {Object.keys(foodCounts).length > 0 ? (

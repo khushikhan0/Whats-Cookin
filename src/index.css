@@ -44,3 +44,7 @@ ul {
     left: 67%;
     top: 1rem;
 }
+
+.x img:hover {
+    transform: scale(1.2);
+}

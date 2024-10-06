@@ -13,8 +13,16 @@
     top: 23rem;
 }
 
+.polaroid-button img:hover {
+    transform: scale(1.05);
+}
+
 .sticky-note-button {
     position: absolute; 
-    left: 55%;
-    top: 25rem;
+    left: 52%;
+    top: 22rem;
+}
+
+.sticky-note-button img:hover {
+    transform: scale(1.05);
 }
