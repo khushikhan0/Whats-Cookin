@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Just Me Again'; 
+    src: url('imgs/JustMeAgainDownHere-Regular.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
 .app-container {
     position: relative; /* Ensure that elements inside can be positioned relative to this container */
 }
@@ -12,9 +19,28 @@
     border: 2px solid black;
     z-index: 1; /* Ensure it appears above other elements */
 }
-.polaroid {
 
+ul {
+    position: absolute; 
+    list-style-type: none; 
+    left: 33%;
+    top: 6rem;
+    opacity: .8;
 }
-.sticky-note {
 
+.food-list {
+    font-family: "Just Me Again", sans-serif; 
+    font-size: 45px; 
+    
+}
+
+.paper {
+    position: absolute; 
+    left: 25%
+}
+
+.x {
+    position: absolute; 
+    left: 67%;
+    top: 1rem;
 }

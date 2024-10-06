@@ -1,13 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from supabasestuff import *
+from .supabasestuff import *
 
 app = FastAPI()
-
-origins = [
-    "http://localhost:3000",
-    "localhost:3000"
-]
 
 app.add_middleware(
     CORSMiddleware,
@@ -18,18 +13,20 @@ app.add_middleware(
 )
 
 @app.get("/", tags=["root"])
-def read_root() -> dict:
+async def read_root() -> dict:
+    print("GOT")
     return {"message": "Welcome to your todo list."}
 
 @app.get("/msg")
-def get_msg(): 
+async def get_msg(): 
+    print('received')
     return {'message': "AHHHHHHHHHHHHH"}
 
 @app.post("/update-food")
-def update_food(data: dict):
+async def update_food(data: dict):
     update_db(data)
     
 @app.get("/get-food")
-def get_food(id_: int):
+async def get_food(id_: int):
     # TODO: khushi investigate what returns here... if necessary add a func to parse! 
     return get_data_by_id(id_)

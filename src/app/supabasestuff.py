@@ -3,7 +3,7 @@ import json
 from supabase import create_client, Client
 from dotenv import load_dotenv
 
-from example_data.data import *
+from .example_data.data import *
 
 # load variables from env
 load_dotenv()
@@ -31,7 +31,7 @@ def update_db(info: dict) -> None:
                     "food": row["food"],
                     "count": row["count"],
                     "moldy_huh": row["moldy_huh"] 
-                    }) 
+                    }).execute() 
         )
         responses.append(response)
     return responses
@@ -62,7 +62,7 @@ def get_data_by_id(id_):
     response = (supabase
         .table("myfood")
         .select('*')
-        .eq('id', id_)
+        .eq('user_id', id_)
         .execute())
     
     return response
@@ -70,9 +70,10 @@ def get_data_by_id(id_):
 
 
 
-# TODO: populate the database with data.py using the new data and functions!
-responses = update_db(day_1_user_1)
-update_db(day_2_user_1)
+# # TODO: populate the database with data.py using the new data and functions!
+# responses = update_db(day_1_user_1)
+# # update_db(day_2_user_1)
 
-test = get_data_by_id(1) 
-print(test)
+# test = get_data_by_id(1) 
+# thing = supabase.table("myfood").select("*").execute()
+# print(test)
