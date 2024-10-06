@@ -3,7 +3,7 @@ import json
 from supabase import create_client, Client
 from dotenv import load_dotenv
 
-from .example_data.data import *
+from example_data.data import *
 
 # load variables from env
 load_dotenv()
@@ -12,21 +12,67 @@ url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
 supabase: Client = create_client(url, key)
 
-# response = (
-#     supabase.table("myfood")
-#     .insert({"food": "celery", "image_bytes": "1", "image_date": "2024-10-04"})
-#     .execute()
-# )
 
-# TODO: def update_db(info):
-# update db everytime photo is uploaded
-# take in a dict, hashmap, json etc -> parse info -> update db with it
+def update_db(info: dict) -> None:
+    """ Populates db with food information
+
+    :param info: json object of the data we want 
+    :return None: None
+    """
+    date = info['dttm']
+    user_id = info['user_id']
+    
+    rows = parse_rows(info['data'])
+    responses = []
+    for row in rows: 
+        response = (supabase.table("myfood")
+            .insert({"user_id": info["user_id"], 
+                    "dttm": info["dttm"],
+                    "food": row["food"],
+                    "count": row["count"],
+                    "moldy_huh": row["moldy_huh"] 
+                    }) 
+        )
+        responses.append(response)
+    return responses
+
+def parse_rows(data: dict) -> list:
+    """ Parses the data rows 
+    
+    :param data: info about rows
+    :return list: information formatted in list of tuples
+    """
+    rows = []
+    for food, food_deets in data.items():
+        count = food_deets['count']
+        moldy = food_deets['moldy_huh']
+        
+        row = {"food": food, "count": count, "moldy_huh": moldy}
+        
+        rows.append(row)
+    
+    return rows
+
+def get_data_by_id(id_):
+    """ Gets data that corresponds with a particular id. 
+    
+    :param id_: unique id belonging to specific user
+    :return None: None
+    """
+    response = (supabase
+        .table("myfood")
+        .select('*')
+        .eq('id', id_)
+        .execute())
+    
+    return response
 
 
-# def get_data_by_id(id):
-#     response = (supabase
-#         .table("myfood")
-#         .select('*')
-#         .eq('id', id)
-#         .execute())
-#     return response
+
+
+# TODO: populate the database with data.py using the new data and functions!
+responses = update_db(day_1_user_1)
+update_db(day_2_user_1)
+
+test = get_data_by_id(1) 
+print(test)
