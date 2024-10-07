@@ -1,16 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './styles.css'; 
+import React from "react";
+import { Link } from "react-router-dom";
+import "./styles.css";
 
 function StickyNoteButton() {
   return (
     <div>
       <Link to="/list-view">
-        <img
-          src="src/imgs/sticky-note.png"
-          alt="Upload"
-          className="sticky-note-button"
-        />
+        <div className="sticky-note-button">
+          <img src="src/imgs/sticky-note.png" alt="Upload" />
+        </div>
       </Link>
     </div>
   );
