@@ -36,11 +36,59 @@ ul {
 
 .paper {
     position: absolute; 
-    left: 25%
+    left: 25%;
 }
 
 .x {
+    width: 50px;
+    height: auto;
     position: absolute; 
+    left: 70%;
+    top: 2rem;
+}
+
+.container {
+    display: flex;             
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;         
+    position: relative;    
+}
+
+.camera {
+    position: absolute; 
+}
+
+.blank-image,
+.selected-image {
+    position: absolute;
+    transform: translate(-15%, 10%);
+    width: 607px;  /* adjusts image width to match blank image */
+    height: 491px; /* adjusts image height to match blank image */
+    object-fit: cover; /* crops image */
+    border-radius: 24px; /* rounds the edges */
+}
+
+.selected-image {
+    object-fit: cover;
+    z-index: 2; 
+}
+
+.add-icon {
+    position: absolute;
+    transform: translate(-45%, 10%);
+}
+
+.x-btn {
+    transform: translate(445%, 320%);
+}
+
+.confirm-btn {
+    transform: translate(345%, 450%); 
+}
+
+.redo-btn {
+    transform: translate(245%, 530%); 
     left: 67%;
     top: 1rem;
 }
