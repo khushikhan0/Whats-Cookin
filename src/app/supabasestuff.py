@@ -3,7 +3,7 @@ import json
 from supabase import create_client, Client
 from dotenv import load_dotenv
 
-from example_data.data import *
+from .example_data.data import *
 
 # load variables from env
 load_dotenv()
