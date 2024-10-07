@@ -87,3 +87,21 @@ day_2_user_3 = {
         "spinach": {"count": 5, "moldy_huh": True}  # Moldy spinach
     }
 }
+
+user1 = {
+    'id': 1, 
+    'username': 'fishfish', 
+    'pwd': 'fisharecool'
+}
+
+user2 = {
+    'id': 2, 
+    'username': 'vampireslayer', 
+    'pwd': 'spaghetti'
+}
+
+user3 = {
+    'id': 3, 
+    'username': 'boink', 
+    'pwd': 'ratisland'
+}

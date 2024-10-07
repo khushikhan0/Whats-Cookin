@@ -3,7 +3,7 @@ import json
 from supabase import create_client, Client
 from dotenv import load_dotenv
 
-from .example_data.data import *
+from example_data.data import *
 
 # load variables from env
 load_dotenv()
@@ -67,6 +67,21 @@ def get_data_by_id(id_):
     
     return response
 
+def update_user_db(data): 
+    response = (supabase.table("userinfo")
+            .insert({"id": data["id"], 
+                    "username": data["username"],
+                    "pwd": data["pwd"]
+                    }).execute() 
+        )
+    return response
+
+def fetch_user_id(username): 
+    response = (supabase.table("userinfo")
+        .select("id")
+        .eq("username", username)
+        .execute())
+    return response
 
 
 
@@ -77,3 +92,12 @@ def get_data_by_id(id_):
 # test = get_data_by_id(1) 
 # thing = supabase.table("myfood").select("*").execute()
 # print(test)
+
+# users = [user1, user2, user3]
+
+# for user in users: 
+#     update_user_db(user)
+
+# response = (supabase.table("userinfo")
+#             .select("*").execute() 
+#         )
