@@ -11,6 +11,11 @@
     position: absolute;  
     left: 27%;
     top: 23rem;
+    
+}
+
+.polaroid-button img {
+    transition: transform 0.3s;
 }
 
 .polaroid-button img:hover {
@@ -21,6 +26,11 @@
     position: absolute; 
     left: 52%;
     top: 22rem;
+    transition: transform 0.3s;
+}
+
+.sticky-note-button img {
+    transition: transform 0.3s;
 }
 
 .sticky-note-button img:hover {

@@ -53,12 +53,15 @@ def parse_rows(data: dict) -> list:
     
     return rows
 
-def get_data_by_id(id_):
+def get_data_by_user(username):
     """ Gets data that corresponds with a particular id. 
     
     :param id_: unique id belonging to specific user
     :return None: None
     """
+    user_response = fetch_user_id(username)
+    id_ = user_response.data[0]['id']
+    print(id_)
     response = (supabase
         .table("myfood")
         .select('*')

@@ -31,7 +31,16 @@ ul {
 .food-list {
     font-family: "Just Me Again", sans-serif; 
     font-size: 45px; 
+    color: #172985;
     
+}
+
+.title{
+    position: absolute;
+    left: 35%;
+    color: #172985;
+    font-family: "Just Me Again", sans-serif; 
+    font-size: 45px; 
 }
 
 .paper {
@@ -48,13 +57,13 @@ ul {
 }
 
 .x img {
-    width: 100%; /* the image takes the full width of the .x div */
-    height: 100%; /* the image takes the full height of the .x div */
-    /* transition: transform 0.3s ease; smooth transition for scaling */
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.3s;
 }
 
 .x img:hover {
-    transform: scale(1.2); /* Scale up the image on hover */
+    transform: scale(1.2); 
 }
 
 .container {
@@ -101,4 +110,65 @@ ul {
     transform: translate(245%, 530%); 
     left: 67%;
     top: 1rem;
+}
+
+.popup {
+    display: flex; 
+    justify-content: center; 
+    position: absolute; 
+    left: 33%;  
+    top: 10rem;  
+    background-image: url("./imgs/paper.png");
+    width: 40vw;
+    height: 50vh; 
+}
+
+.popup-content {
+    font-family: "Just Me Again", sans-serif; 
+    font-size: 40px;
+    opacity: 0.8;
+    color: #172985;
+    align-items: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 300px; 
+    margin: 0 auto; 
+}
+
+.input-box input {
+    font-family: "Just Me Again"; 
+    padding: 10px; 
+    border: 2px solid #0096DD; 
+    border-radius: 15px; 
+    width: 100%; 
+    font-size: 24px; 
+    outline: none; 
+    transition: border-color 0.3s; 
+}
+
+.input-box input:focus {
+    border-color: #FF4081; 
+}
+
+.input-box button {
+    padding: 10px 20px; 
+    background-color: #0096DD; 
+    color: white;
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer;
+    font-family: "Just Me Again"; 
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s; 
+    margin-top: 10px;
+    
+}
+
+.input-box button:hover {
+    background-color: #FF4081; 
+    transform: scale(1.05); 
 }

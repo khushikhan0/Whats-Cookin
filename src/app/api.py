@@ -27,10 +27,7 @@ async def update_food(data: dict):
     update_db(data)
     
 @app.get("/get-food")
-async def get_food(id_: int):
+async def get_food(username: str):
     # TODO: khushi investigate what returns here... if necessary add a func to parse! 
-    return get_data_by_id(id_)
+    return get_data_by_user(username)
 
-@app.get("/get-user-id")
-async def get_user_id(username: str) -> int:
-    return fetch_user_id(username) 
