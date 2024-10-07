@@ -20,7 +20,7 @@ const Letter = ({ letter, rotation, size }) => {
 Letter.propTypes = {
     letter: PropTypes.string.isRequired, // letter must be a string
     rotation: PropTypes.number.isRequired, // rotation must be a number
-    size: PropTypes.number.isRequired
+    size: PropTypes.number // size doesn't need to be specified
 };
 
 export default Letter;

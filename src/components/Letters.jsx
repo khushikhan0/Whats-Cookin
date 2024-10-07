@@ -4,11 +4,10 @@ import './Letters.css';
 
 const Letters = () => {
     const whats = [
-        { char: 'W', rotation: 0 },
-        { char: 'H', rotation: 15 },
-        { char: 'A', rotation: -15 },
-        { char: 'T', rotation: 30 },
-        { char: 'L', rotation: -30 , size: '20px'},
+        { char: 'W', rotation: -5, size: '110px' },
+        { char: 'H', rotation: -10, size: '90px' },
+        { char: 'A', rotation: 15 },
+        { char: 'T', rotation: 30, size: '140px'},
         { char: 'S', rotation: 0 },
     ];
 
@@ -19,18 +18,19 @@ const Letters = () => {
         { char: 'K', rotation: -30 },
         { char: 'i', rotation: 0 },
         { char: 'N', rotation: 15 },
+        { char: 'q', rotation: 0},
     ];
 
     return (
         <div className="words-container">
-            <div className="word1">
+            <div className="whats">
                 {whats.map(({ char, rotation, size }) => (
                     <Letter key={char} letter={char} rotation={rotation} size={size} />
                 ))}
             </div>
-            <div className="word2">
-                {cookin.map(({ char, rotation, size }) => (
-                    <Letter key={char} letter={char} rotation={rotation} size={size} />
+            <div className="cookin">
+                {cookin.map(({ char, rotation }) => (
+                    <Letter key={char} letter={char} rotation={rotation} />
                 ))}
             </div>
         </div>
