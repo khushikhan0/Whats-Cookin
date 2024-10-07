@@ -47,6 +47,16 @@ ul {
     top: 2rem;
 }
 
+.x img {
+    width: 100%; /* the image takes the full width of the .x div */
+    height: 100%; /* the image takes the full height of the .x div */
+    /* transition: transform 0.3s ease; smooth transition for scaling */
+}
+
+.x img:hover {
+    transform: scale(1.2); /* Scale up the image on hover */
+}
+
 .container {
     display: flex;             
     justify-content: center;    
@@ -91,8 +101,4 @@ ul {
     transform: translate(245%, 530%); 
     left: 67%;
     top: 1rem;
-}
-
-.x img:hover {
-    transform: scale(1.2);
 }
